@@ -1,6 +1,6 @@
 {
     "builds": [{
-        "src": "web/wsgi.py",
+        "src": "codewizards/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb" }
     }
@@ -8,7 +8,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "web/wsgi.py"
+            "dest": "codewizards/wsgi.py"
         }
     ]
 }
