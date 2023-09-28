@@ -376,46 +376,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff !important;
   border: 2px solid rgba(255, 255, 255, 0.2);
 }
-.legel-container{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.legel-advisor-pic{
-  border-radius: 25%;
-  width: 59%;
-}
-.legel-left{
 
-    width: 40%;
-    display: flex;
-    justify-content: center;
-}
-
-.legel-right{
-  font-size: 20px;
-  display: flex;
-  width: 44%;
-  flex-direction: column;
-}
-.legel-right span{
-  margin: 10px 0px;
-  margin-right: 40px;
-
-  font-weight: 560;
-}
-.legel-right span a{
-  text-decoration: none;
-}
-.legel-work{
-  width: 40%;
-}
-.legal-work{
-  font-size: 20px;
-  font-weight: 550;
-  cursor:auto ;
-  margin: 10px 0px;
-}
 #gtco-header,
 #gtco-counter,
 .gtco-bg {
@@ -515,7 +476,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(11, 111, 191, 0.5);
 }
 .gtco-cover > .gtco-container {
   position: relative;
@@ -829,7 +790,7 @@ form label {
 }
 
 #gtco-features {
-  background: #FBB448;
+  background: #0b6fbf;
 }
 #gtco-features .gtco-heading h2 {
   color: #fff;
