@@ -40,21 +40,7 @@
             </div>
         </div>
         <div class="row">
-            {% for product in products %}
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="{%static '{{product.img.url}}'%}" class="fh5co-card-item image-popup">
-                    <figure>
-                        <div class="overlay"><i class="ti-plus"></i></div>
-                        <img src="{{product.img.url}}" alt="Image" class="img-responsive">
-                    </figure>
-                    <div class="fh5co-text">
-                        <h2>{{product.name}}</h2>
-                        <p>{{product.desc}}</p>
-                        <p><span class="price cursive-font">{{product.price}}</span></p>
-                    </div>
-                </a>
-            </div>
-            {%endfor%}
+
         </div>
     </div>
 </div>
