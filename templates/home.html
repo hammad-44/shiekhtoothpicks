@@ -1,287 +1,371 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}Home{% endblock title %}
-
-{% block body %}
-<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner"
-    style="background-image: url(../static/images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="gtco-container">
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0 text-left">
-
-
-                <div class="row row-mt-15em">
-                    <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-                        <span class="intro-text-small">It is a Brand of  <a href="https://7bugstoothpicks.surge.sh/"
-                                >7-BUGS</a></span>
-                        <h1 class="cursive-font">Sheikh ToothPicks & Sugar</h1>
-                    </div>
-                    <div style="
-    margin-top: 17%;
-" class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
-                      <img id="herosecimg" src="{%static 'Logos/logo.png' %}" alt="">  
-                        <span class="intro-text-small">Place Your Orders From Here  <a href="#order-form"> <input value="Order Now" class="btn btn-primary"></a></span>
-                   
-                    </div>
-                </div>
-
-            </div>
+{% extends 'base.html' %} {% load static %} {% block title %}Home{% endblock
+title %} {% block body %}
+<header
+  id="gtco-header"
+  class="gtco-cover gtco-cover-md"
+  role="banner"
+  style="background-image: url(../static/images/img_bg_1.jpg)"
+  data-stellar-background-ratio="0.5"
+>
+  <div class="overlay"></div>
+  <div class="gtco-container">
+    <div class="row">
+      <div class="col-md-12 col-md-offset-0 text-left">
+        <div class="row row-mt-15em">
+          <div
+            class="col-md-7 mt-text animate-box"
+            data-animate-effect="fadeInUp"
+          >
+            <span class="intro-text-small"
+              >It is a Brand of
+              <a href="https://7bugstoothpicks.surge.sh/">7-BUGS</a></span
+            >
+            <h1 class="cursive-font">Sheikh ToothPicks & Sugar</h1>
+          </div>
+          <div
+            style="margin-top: 17%"
+            class="col-md-4 col-md-push-1 animate-box"
+            data-animate-effect="fadeInRight"
+          >
+            <img id="herosecimg" src="{%static 'Logos/logo.png' %}" alt="" />
+            <span class="intro-text-small"
+              >Place Your Orders From Here
+              <a href="#order-form">
+                <input value="Order Now" class="btn btn-primary" /></a
+            ></span>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </header>
 
-
-
 <div class="gtco-section" id="products">
-    <div class="gtco-container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                <h2 class="cursive-font primary-color">Our Products</h2>
-                <p>All of these Products Are Manfuctured and Distributed By Sheikh ToothPicks & Sugar Sachets</p>
-            </div>
-        </div>
-        <div class="row">
-                    
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="{%static '/products/p1.png'%}" class="fh5co-card-item image-popup">
-                    <figure>
-                        <div class="overlay"><i class="ti-plus"></i></div>
-                        <img src="{%static '/products/p1.png'%}" alt="Image" class="img-responsive">
-                    </figure>
-                    <div class="fh5co-text">
-                        <h2>Toothpicks</h2>
-                        <p>Wooden Toothpicks Packed in Simple White Wrap</p>
-                        <p><span class="price cursive-font">50,000 per Box</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="{%static '/products/p1.png'%}" class="fh5co-card-item image-popup">
-                    <figure>
-                        <div class="overlay"><i class="ti-plus"></i></div>
-                        <img src="{%static '/products/p2.png'%}" alt="Image" class="img-responsive">
-                    </figure>
-                    <div class="fh5co-text">
-                        <h2>Printed Toothpics</h2>
-                        <p>Toothpicks Packed in Wrap With Your Design</p>
-                        <p><span class="price cursive-font">60,000 per Box</span></p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="{%static '/products/p1.png'%}" class="fh5co-card-item image-popup">
-                    <figure>
-                        <div class="overlay"><i class="ti-plus"></i></div>
-                        <img src="{%static '/products/p3.png'%}" alt="Image" class="img-responsive">
-                    </figure>
-                    <div class="fh5co-text">
-                        <h2>Sugar Sachets</h2>
-                        <p>Packed in Simple White Wrap or Your Design </p>
-                        <p><span class="price cursive-font">50,000 per Box</span></p>
-                    </div>
-                </a>
-            </div>
-          
-        </div>
+  <div class="gtco-container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+        <h2 class="cursive-font primary-color">Our Products</h2>
+        <p>
+          All of these Products Are Manfuctured and Distributed By Sheikh
+          ToothPicks & Sugar Sachets
+        </p>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6">
+        <a
+          href="{%static '/products/p1.png'%}"
+          class="fh5co-card-item image-popup"
+        >
+          <figure>
+            <div class="overlay"><i class="ti-plus"></i></div>
+            <img
+              src="{%static '/products/p1.png'%}"
+              alt="Image"
+              class="img-responsive"
+            />
+          </figure>
+          <div class="fh5co-text">
+            <h2>Toothpicks</h2>
+            <p>Wooden Toothpicks Packed in Simple White Wrap</p>
+            <p><span class="price cursive-font">50,000 per Box</span></p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6">
+        <a
+          href="{%static '/products/p1.png'%}"
+          class="fh5co-card-item image-popup"
+        >
+          <figure>
+            <div class="overlay"><i class="ti-plus"></i></div>
+            <img
+              src="{%static '/products/p2.png'%}"
+              alt="Image"
+              class="img-responsive"
+            />
+          </figure>
+          <div class="fh5co-text">
+            <h2>Printed Toothpics</h2>
+            <p>Toothpicks Packed in Wrap With Your Design</p>
+            <p><span class="price cursive-font">60,000 per Box</span></p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6">
+        <a
+          href="{%static '/products/p1.png'%}"
+          class="fh5co-card-item image-popup"
+        >
+          <figure>
+            <div class="overlay"><i class="ti-plus"></i></div>
+            <img
+              src="{%static '/products/p3.png'%}"
+              alt="Image"
+              class="img-responsive"
+            />
+          </figure>
+          <div class="fh5co-text">
+            <h2>Sugar Sachets</h2>
+            <p>Packed in Simple White Wrap or Your Design</p>
+            <p><span class="price cursive-font">50,000 per Box</span></p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="gtco-features">
-    <div class="gtco-container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-                <h2 class="cursive-font">Our Specialities</h2>
-                <p>ShiekhToothpickSugar is A Manafacturer and Supplier of ToothPicks and Sugar Sachets all Over Pakistan</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="feature-center animate-box" data-animate-effect="fadeIn">
-                    <span class="icon">
-                        <i class="fa-solid fa-tree fa-beat"></i>
-                    </span>
-                    <h3>Quality Woods</h3>
-                    <p></p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="feature-center animate-box" data-animate-effect="fadeIn">
-                    <span class="icon">
-                        <i class="fa-solid fa-tooth fa-beat"></i>
-                    </span>
-                    <h3>Perfectly Manafactured ToothPicks</h3>
-                    <p></p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="feature-center animate-box" data-animate-effect="fadeIn">
-                    <span class="icon">
-                        <i class="fa-solid fa-truck fa-beat"></i>
-                    </span>
-                    <h3>Box Delivery</h3>
-                    <p></p>
-                </div>
-            </div>
-
-
-        </div>
+  <div class="gtco-container">
+    <div class="row">
+      <div
+        class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box"
+      >
+        <h2 class="cursive-font">Our Specialities</h2>
+        <p>
+          ShiekhToothpickSugar is A Manafacturer and Supplier of ToothPicks and
+          Sugar Sachets all Over Pakistan
+        </p>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="feature-center animate-box" data-animate-effect="fadeIn">
+          <span class="icon">
+            <i class="fa-solid fa-tree fa-beat"></i>
+          </span>
+          <h3>Quality Woods</h3>
+          <p></p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="feature-center animate-box" data-animate-effect="fadeIn">
+          <span class="icon">
+            <i class="fa-solid fa-tooth fa-beat"></i>
+          </span>
+          <h3>Perfectly Manafactured ToothPicks</h3>
+          <p></p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="feature-center animate-box" data-animate-effect="fadeIn">
+          <span class="icon">
+            <i class="fa-solid fa-truck fa-beat"></i>
+          </span>
+          <h3>Box Delivery</h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <section id="order-form" class="bg-fixed bg-white section-padding overlay">
-                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                <h2 class="cursive-font primary-color">Order Here</h2>
-                <p>After Order We Will Contact you As Soon As Possible</p>
+  <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+    <h2 class="cursive-font primary-color">Order Here</h2>
+    <p>After Order We Will Contact you As Soon As Possible</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="section-content bg-white p-5 shadow">
+          <div class="heading-section text-center">
+            <span class="subheading"> Place Your </span>
+            <h2>Order Now</h2>
+          </div>
+          {% csrf_token %}
+          <form method="post" action="/order">
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Name"
+                />
+              </div>
+              <div class="col-md-12 form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="col-md-12 form-group">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  required
+                  placeholder="Phone"
+                />
+              </div>
+
+              <div class="col-md-12 form-group">
+                <h5 class="text-center">Select The Product</h5>
+              </div>
+              <div class="col-md-12 form-group">
+                <select
+                  class="form-control"
+                  id="selectPerson"
+                  name="product"
+                  required
+                >
+                  <option></option>
+                  <option>ToothPicks</option>
+                  <option>Printed ToothPicks</option>
+                  <option>Sugar Sachets</option>
+                </select>
+              </div>
+              <div class="col-md-12 form-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="phoneNumber"
+                  name="quantity"
+                  required
+                  placeholder="Quantity of Products"
+                />
+              </div>
+              <div class="col-md-12 form-group">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Any Other Information You Want To Provide....."
+                ></textarea>
+              </div>
+              <div class="col-md-12 text-center">
+                {% csrf_token %}
+                <button
+                  class="btn btn-primary btn-shadow btn-lg"
+                  type="submit"
+                  name="submit"
+                >
+                  Place Order
+                </button>
+              </div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="section-content bg-white p-5 shadow">
-                            <div class="heading-section text-center">
-                                <span class="subheading">
-                                    Place Your
-                                </span>
-                                <h2>
-                                    Order Now
-                                </h2>
-                            </div>
-                            {% csrf_token %}
-                            <form method="post" action="/order">
-                                <div class="row">
-                                    <div class="col-md-12 form-group">
-                                        <input type="text" class="form-control" id="name" name="name" required
-                                            placeholder="Name">
-                                    </div>
-                                    <div class="col-md-12 form-group">
-                                        <input type="text" class="form-control" id="email" name="email"
-                                            placeholder="Email">
-                                    </div>
-                                    <div class="col-md-12 form-group">
-                                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required
-                                            placeholder="Phone">
-                                    </div>
-                                    
-                                    
-                                    <div class="col-md-12 form-group">
-                                        <h5 class="text-center">Select The Product</h5>
-                                    </div>
-                                    <div class="col-md-12 form-group">
-                                        <select class="form-control" id="selectPerson" name="product" required>
-                                            <option></option>
-                                            <option>ToothPicks</option>
-                                            <option>Printed ToothPicks</option>
-                                            <option>Sugar Sachets</option>
-                                            
-                                        </select>
-                                    </div>
-                                    <div class="col-md-12 form-group">
-                                        <input type="number" class="form-control" id="phoneNumber" name="quantity" required
-                                            placeholder="Quantity of Products">
-                                    </div>
-                                    <div class="col-md-12 form-group">
-                                        <textarea class="form-control" id="message" name="message" rows="6"
-                                            placeholder="Any Other Information You Want To Provide....."></textarea>
-                                    </div>
-                                    <div class="col-md-12 text-center">
-                                        {% csrf_token %}
-                                        <button class="btn btn-primary btn-shadow btn-lg" type="submit"
-                                            name="submit">Place Order</button>
-                                            
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-</section>
-
-
-<div id="gtco-counter" class="gtco-section">
-    <div class="gtco-container">
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-                <h2 class="cursive-font primary-color">About Us</h2>
-                <p>Shiekh Toothpick Sugar is A Brand of <a href="https://7bugstoothpicks.surge.sh/" target="_blank"> 7-BUGS </a></p>
-            </div>
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-                <div class="feature-center">
-                    <span class="counter js-counter" data-from="0" data-to="5" data-speed="5000"
-                        data-refresh-interval="50">1</span>
-                    <span class="counter-label">Avg. Rating</span>
-
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-                <div class="feature-center">
-                    <span class="counter js-counter" data-from="0" data-to="43" data-speed="5000"
-                        data-refresh-interval="50">50</span>
-                    <span class="counter-label">Clients</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-                <div class="feature-center">
-                    <span class="counter js-counter" data-from="0" data-to="4" data-speed="5000"
-                        data-refresh-interval="50">1</span>
-                    <span class="counter-label">Products</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-                <div class="feature-center">
-                    <span class="counter js-counter" data-from="0" data-to="2005" data-speed="5000"
-                        data-refresh-interval="50">1</span>
-                    <span class="counter-label">Year Started</span>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div> 
-
-
-
-
-  <section id="legel-advisor">
-     <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-                <h2 class="cursive-font primary-color">Legel Advisor</h2>
-            </div>
-        </div>
-
-      <div class="legel-container gtco-container">
-        <div class="legel-left">
-          <img class="legel-advisor-pic" src="{%static '/images/RanaAshfaq.jpeg' %}" alt="Advisor">
-        </div>
-        <div class="legel-right">
-          <span class="legel-det">Name : Rana M. Ashfaq </span>
-          <span class="legel-det">Phone : <a href="tel:03037408688"> 03037408688</a></span>
-          <span class="legel-det">Phone : <a href="tel:03347408688"> 03347408688 </a></span>
-        </div>
-        <div class="legel-work">
-          <ol class="legel-work-list">
-            <li class="legal-work">
-              Rebate Refunds
-            </li>
-            <li class="legal-work">
-              Sales Tax Refunds
-            </li>
-            <li class="legal-work">
-              WithHolding Tax Return Filing
-            </li>
-            <li class="legal-work">
-              Income Tax and Sale Tax Return Filing
-            </li>
-          </ol>
+          </form>
         </div>
       </div>
-  </section>  
+    </div>
+  </div>
+</section>
+
+<div id="gtco-counter" class="gtco-section">
+  <div class="gtco-container">
+    <div class="row">
+      <div
+        class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box"
+      >
+        <h2 class="cursive-font primary-color">About Us</h2>
+        <p>
+          Shiekh Toothpick Sugar is A Brand of
+          <a href="https://7bugstoothpicks.surge.sh/" target="_blank">
+            7-BUGS
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+        <div class="feature-center">
+          <span
+            class="counter js-counter"
+            data-from="0"
+            data-to="5"
+            data-speed="5000"
+            data-refresh-interval="50"
+            >1</span
+          >
+          <span class="counter-label">Avg. Rating</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+        <div class="feature-center">
+          <span
+            class="counter js-counter"
+            data-from="0"
+            data-to="43"
+            data-speed="5000"
+            data-refresh-interval="50"
+            >50</span
+          >
+          <span class="counter-label">Clients</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+        <div class="feature-center">
+          <span
+            class="counter js-counter"
+            data-from="0"
+            data-to="4"
+            data-speed="5000"
+            data-refresh-interval="50"
+            >1</span
+          >
+          <span class="counter-label">Products</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+        <div class="feature-center">
+          <span
+            class="counter js-counter"
+            data-from="0"
+            data-to="2005"
+            data-speed="5000"
+            data-refresh-interval="50"
+            >1</span
+          >
+          <span class="counter-label">Year Started</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="legel-advisor">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+      <h2 class="cursive-font primary-color">Legel Advisor</h2>
+    </div>
+  </div>
+
+  <div class="legel-container gtco-container">
+    <div class="legel-left">
+      <img
+        class="legel-advisor-pic"
+        src="{%static '/images/RanaAshfaq.jpeg' %}"
+        alt="Advisor"
+      />
+    </div>
+    <div class="legel-right">
+      <span class="legel-det">Name : Rana M. Ashfaq </span>
+      <span class="legel-det"
+        >Phone : <a href="tel:03037408688"> 03037408688</a></span
+      >
+      <span class="legel-det"
+        >Phone : <a href="tel:03347408688"> 03347408688 </a></span
+      >
+    </div>
+    <div class="legel-work">
+      <ol class="legel-work-list">
+        <li class="legal-work">Rebate Refunds</li>
+        <li class="legal-work">Sales Tax Refunds</li>
+        <li class="legal-work">WithHolding Tax Return Filing</li>
+        <li class="legal-work">Income Tax and Sale Tax Return Filing</li>
+      </ol>
+    </div>
+  </div>
+</section>
 
 {% endblock body %}
