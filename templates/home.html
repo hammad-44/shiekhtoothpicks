@@ -19,7 +19,7 @@
                     </div>
                     <div style="margin-top: 17%;" class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
                       <img id="herosecimg" src="{%static 'Logos/logo.png' %}" alt="">  
-                        <span class="intro-text-small">Place Your Orders From Here  <a href="#order-form"> <input value="Order Now" class="btn btn-primary"></a></span>
+                        <span class="intro-text-small">Place Your Orders From Here  <a href="/orderform"> <input value="Order Now" class="btn btn-primary"></a></span>
                    
                     </div>
                 </div>
@@ -150,104 +150,7 @@
   </div>
 </div>
 
-<section id="order-form" class="bg-fixed bg-white section-padding overlay">
-  <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-    <h2 class="cursive-font primary-color">Order Here</h2>
-    <p>After Order We Will Contact you As Soon As Possible</p>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5">
-        <div class="section-content bg-white p-5 shadow">
-          <div class="heading-section text-center">
-            <span class="subheading"> Place Your </span>
-            <h2>Order Now</h2>
-          </div>
-          {% csrf_token %}
-          <form method="post" action="/order">
-            <div class="row">
-              <div class="col-md-12 form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  name="name"
-                  required
-                  placeholder="Name"
-                />
-              </div>
-              <div class="col-md-12 form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                />
-              </div>
-              <div class="col-md-12 form-group">
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  required
-                  placeholder="Phone"
-                />
-              </div>
 
-              <div class="col-md-12 form-group">
-                <h5 class="text-center">Select The Product</h5>
-              </div>
-              <div class="col-md-12 form-group">
-                <select
-                  class="form-control"
-                  id="selectPerson"
-                  name="product"
-                  required
-                >
-                  <option></option>
-                  <option>ToothPicks</option>
-                  <option>Printed ToothPicks</option>
-                  <option>Sugar Sachets</option>
-                </select>
-              </div>
-              <div class="col-md-12 form-group">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="phoneNumber"
-                  name="quantity"
-                  required
-                  placeholder="Quantity of Products"
-                />
-              </div>
-              <div class="col-md-12 form-group">
-                <textarea
-                  class="form-control"
-                  id="message"
-                  name="message"
-                  rows="6"
-                  placeholder="Any Other Information You Want To Provide....."
-                ></textarea>
-              </div>
-              <div class="col-md-12 text-center">
-                {% csrf_token %}
-                <button
-                  class="btn btn-primary btn-shadow btn-lg"
-                  type="submit"
-                  name="submit"
-                >
-                  Place Order
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <div id="gtco-counter" class="gtco-section">
   <div class="gtco-container">

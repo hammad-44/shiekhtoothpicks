@@ -1,11 +1,10 @@
-from django.shortcuts import render,HttpResponse
-from toothpicks.models import product,Contact, Order
+from django.shortcuts import render,redirect
+import webbrowser
+from django.contrib import messages
 
-# Create your views here.
+
 def home(request):
-    products= product.objects.all()
-    context = {"products":products}
-    return render(request, "home.html",  context)
+    return render(request, "home.html")
 
 
 def contact(request):
@@ -13,11 +12,13 @@ def contact(request):
         name = request.POST['name']
         email = request.POST['email']
         message = request.POST['message']
-        contact=Contact(name=name, email=email, message=message)
-        contact.save()
         return render(request, 'retur.html')
     else:
         return render(request,'contact.html')
+
+def orderform(request):
+    return render(request,'orderform.html')
+
 
 def order(request):
     if request.method == 'POST':
@@ -27,8 +28,12 @@ def order(request):
         product = request.POST['product']
         quantity = request.POST['quantity']
         message = request.POST['message']
-        order=Order(name=name, email=email,number=phoneNumber,product=product,quantity=quantity, message=message)
-        order.save()
-        return render(request, "order.html")
-    else:
-        return render(request,"home.html")
+        if int(quantity) < 50 and product == "ToothPicks" or product == "Printed ToothPicks":
+            messages.error(request,"You Have to Order Atleast 50 Boxes")
+        elif int(quantity) < 10000 and product == "Sugar Sachets":
+            messages.error(request,"You Have to Order Atleast 10,000 Pieces")
+        else:
+            url =f"https://wa.me/923034139181?text=Name : {name}%0aEmail : {email}%0aPhone Number : {phoneNumber}%0aProduct : {product}%0aNumber of Box : {quantity}%0aMessage : {message}"
+            webbrowser.open(url)
+            return render(request, "order.html")
+    return render(request, 'orderform.html')
