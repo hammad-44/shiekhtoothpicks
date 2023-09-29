@@ -72,7 +72,7 @@
               </div>
               {% for msg in messages  %}
                   <div>
-                      <p style="color:red;font-weight:800;font-size:19px">{{msg}}</p>
+                      <p id = "errmsg" style="color:red;font-weight:800;font-size:19px;margin-left:20px">{{msg}}</p>
                       
                   </div>
               {% endfor %}
@@ -113,5 +113,12 @@
   </div>
 </section>
 
+{% block jsblock %}
+    <script>
+      setTimeout(function () {
+        $("#errmsg").fadeOut("fast");
+      }, 5000);
+    </script>
+{% endblock jsblock %}
  
 {%endblock body%}
