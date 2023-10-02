@@ -33,7 +33,7 @@ def order(request):
             messages.error(request,"You Have to Order Atleast 50 Boxes")
             return render(request, 'orderform.html')
         elif int(quantity) < 50 and product == "Printed ToothPicks":
-            messages.error(request,"You Have to Order Atleast 50 oxes")
+            messages.error(request,"You Have to Order Atleast 50 Boxes")
             return render(request, 'orderform.html')
         elif int(quantity) < 10000 and product == "Sugar Sachets":
             messages.error(request,"You Have to Order Atleast 10,000 Pieces")
