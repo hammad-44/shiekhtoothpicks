@@ -1,7 +1,13 @@
 from django.shortcuts import render,redirect
 import webbrowser
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from django import forms
+from django.core.exceptions import ViewDoesNotExist
+
+class RedirectException(BaseException):
+    def __init__(self, url):
+        self.url = url
 
 form_data_list = []
 class MyForm(forms.Form):
@@ -75,6 +81,8 @@ def order(request):
         form_data_list.append(formdata)
         print(form_data_list)
         url =f"https://wa.me/923034139181?text=Name : {name}%0aEmail : {email}%0aPhone Number : {phoneNumber}%0aProduct : {product}%0aNumber of Box : {quantity}%0aMessage : {message}"
-        webbrowser.open(url)
+        webbrowser.open_new_tab(url)
         return render(request, "order.html")
+        
+
    
