@@ -42,66 +42,21 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <a
-          href="{%static '/products/p1.png'%}"
-          class="fh5co-card-item image-popup"
-        >
-          <figure>
-            <div class="overlay"><i class="ti-plus"></i></div>
-            <img
-              src="{%static '/products/p1.png'%}"
-              alt="Image"
-              class="img-responsive"
-            />
-          </figure>
-          <div class="fh5co-text">
-            <h2>Toothpicks</h2>
-            <p>Wooden Toothpicks Packed in Simple White Wrap</p>
-            <p><span class="price cursive-font">50,000 per Box</span></p>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <a
-          href="{%static '/products/p2.png'%}"
-          class="fh5co-card-item image-popup"
-        >
-          <figure>
-            <div class="overlay"><i class="ti-plus"></i></div>
-            <img
-              src="{%static '/products/p2.png'%}"
-              alt="Image"
-              class="img-responsive"
-            />
-          </figure>
-          <div class="fh5co-text">
-            <h2>Printed Toothpics</h2>
-            <p>Toothpicks Packed in Wrap With Your Design</p>
-            <p><span class="price cursive-font">60,000 per Box</span></p>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <a
-          href="{%static '/products/p3.png'%}"
-          class="fh5co-card-item image-popup"
-        >
-          <figure>
-            <div class="overlay"><i class="ti-plus"></i></div>
-            <img
-              src="{%static '/products/p3.png'%}"
-              alt="Image"
-              class="img-responsive"
-            />
-          </figure>
-          <div class="fh5co-text">
-            <h2>Sugar Sachets</h2>
-            <p>Packed in Simple White Wrap or Your Design</p>
-            <p><span class="price cursive-font">50,000 per Box</span></p>
-          </div>
-        </a>
-      </div>
+           {% for product in products %}
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <a href="{{product.img.url}}" class="fh5co-card-item image-popup">
+                    <figure>
+                        <div class="overlay"><i class="ti-plus"></i></div>
+                        <img src="{{product.img.url}}" alt="Image" class="img-responsive">
+                    </figure>
+                    <div class="fh5co-text">
+                        <h2>{{product.name}}</h2>
+                        <p>{{product.desc}}</p>
+                        <p><span class="price cursive-font">{{product.price}}</span></p>
+                    </div>
+                </a>
+            </div>
+            {%endfor%}
     </div>
   </div>
 </div>

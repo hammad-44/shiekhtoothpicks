@@ -10,7 +10,7 @@ class product(models.Model):
     img = models.ImageField(upload_to='static/products/',)
     def __str__(self):
         return f"Product #{self.sno} - {self.name}- {timezone.now()}"
-class Contact(models.Model):
+class Contacst(models.Model):
     sno=models.AutoField(primary_key=True,default=1)
     name=models.CharField(max_length=255)
     email=models.CharField(max_length=255)
