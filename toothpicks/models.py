@@ -1,14 +1,13 @@
 from django.db import models
 from django.core.files.storage import FileSystemStorage
 from django.utils import timezone
-from storage import OverwriteStorage
 # Create your models here.
 class product(models.Model):
     sno=models.AutoField(primary_key=True)
     name=models.CharField(max_length=255)
     desc=models.CharField(max_length=255)
     price=models.CharField(max_length=30)
-    img = models.ImageField(upload_to='static/products/',storage=OverwriteStorage())
+    img = models.ImageField(upload_to='static/products/',storage=FileSystemStorage())
     def __str__(self):
         return f"Product #{self.sno} - {self.name}- {timezone.now()}"
 class Contacst(models.Model):
