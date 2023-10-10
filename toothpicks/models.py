@@ -11,7 +11,7 @@ class product(models.Model):
     def __str__(self):
         return f"Product #{self.sno} - {self.name}- {timezone.now()}"
 class Contacst(models.Model):
-    sno=models.AutoField(primary_key=True,default=1)
+    sno=models.AutoField(primary_key=True)
     name=models.CharField(max_length=255)
     email=models.CharField(max_length=255)
     message=models.CharField(max_length=255)
