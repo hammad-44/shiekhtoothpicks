@@ -11,12 +11,12 @@ class product(models.Model):
     def __str__(self):
         return f"Product NO {self.sno} - {self.name}"
 class Contacst(models.Model):
-    sno=models.AutoField(primary_key=True)
+    idd=models.AutoField(primary_key=True)
     name=models.CharField(max_length=255)
     email=models.CharField(max_length=255)
     message=models.CharField(max_length=255)
     def __str__(self):
-        return f"Contact No {self.sno} - {self.name}- {timezone.now()}"
+        return f"Contact No {self.idd} - {self.name}- {timezone.now()}"
 class Order(models.Model):
     sno=models.AutoField(primary_key=True)
     name=models.CharField(max_length=255)
