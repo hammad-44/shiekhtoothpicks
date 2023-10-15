@@ -1,33 +1,43 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}Home{% endblock title %}
-
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %}Home{% endblock title %} 
 {% block body %}
-<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner"
-    style="background-image: url(../static/images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="gtco-container">
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0 text-left">
-
-
-                <div class="row row-mt-15em">
-                    <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-                        <span class="intro-text-small">  <a href="https://7bugstoothpicks.surge.sh/"
-                                ><img style="
-    width: 115px;" src="{%static 'Logos/7bugs1.png' %}"></a> is a Brand of </span>
-                        <h1  style="font-family: 'Times New Roman', Times, serif;">Sheikh Toothpicks & Sugar Sachets</h1>
-                    </div>
-                    <div style="margin-top: 17%;" class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
-                      <img id="herosecimg" src="{%static 'Logos/logo.png' %}" alt="">  
-                        <span class="intro-text-small">Place Your Orders From Here  <a href="/orderform"> <input value="Order Now" class="btn btn-primary"></a></span>
-                   
-                    </div>
-                </div>
-
-            </div>
+<header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(../static/images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="gtco-container">
+    <div class="row">
+      <div class="col-md-12 col-md-offset-0 text-left">
+        <div class="row row-mt-15em">
+          <div
+            class="col-md-7 mt-text animate-box"
+            data-animate-effect="fadeInUp"
+          >
+            <span class="intro-text-small">
+              <a href="https://7bugstoothpicks.surge.sh/"
+                ><img style="width: 115px" src="{%static 'Logos/7bugs1.png' %}"
+              /></a>
+              is a Brand of
+            </span>
+            <h1 style="font-family: 'Times New Roman', Times, serif">
+              Sheikh Toothpicks & Sugar Sachets
+            </h1>
+          </div>
+          <div
+            style="margin-top: 17%"
+            class="col-md-4 col-md-push-1 animate-box"
+            data-animate-effect="fadeInRight"
+          >
+            <img id="herosecimg" src="{%static 'Logos/logo.png' %}" alt="" />
+            <span class="intro-text-small"
+              >Place Your Orders From Here
+              <a href="/orderform">
+                <input value="Order Now" class="btn btn-primary" /></a
+            ></span>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </header>
 
 <div class="gtco-section" id="products">
@@ -42,21 +52,21 @@
       </div>
     </div>
     <div class="row">
-           {% for product in products %}
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="{{product.img}}" class="fh5co-card-item image-popup">
-                    <figure>
-                        <div class="overlay"><i class="ti-plus"></i></div>
-                        <img src="{{product.img}}" alt="Image" class="img-responsive">
-                    </figure>
-                    <div class="fh5co-text">
-                        <h2>{{product.name}}</h2>
-                        <p>{{product.desc}}</p>
-                        <p><span class="price cursive-font">{{product.price}}</span></p>
-                    </div>
-                </a>
-            </div>
-            {%endfor%}
+      {% for product in products %}
+      <div class="col-lg-4 col-md-4 col-sm-6">
+        <a href="{{product.img}}" class="fh5co-card-item image-popup">
+          <figure>
+            <div class="overlay"><i class="ti-plus"></i></div>
+            <img src="{{product.img}}" alt="Image" class="img-responsive" />
+          </figure>
+          <div class="fh5co-text">
+            <h2>{{product.name}}</h2>
+            <p>{{product.desc}}</p>
+            <p><span class="price cursive-font">{{product.price}}</span></p>
+          </div>
+        </a>
+      </div>
+      {%endfor%}
     </div>
   </div>
 </div>
@@ -106,8 +116,6 @@
   </div>
 </div>
 
-
-
 <div id="gtco-counter" class="gtco-section">
   <div class="gtco-container">
     <div class="row">
@@ -116,9 +124,11 @@
       >
         <h2 class="cursive-font primary-color">About Us</h2>
         <p>
-<a href="https://7bugstoothpicks.surge.sh/"
-                                ><img class="bugsimg" src="{%static 'Logos/7bugs.png' %}"></a> 
-          &nbsp;&nbsp;&nbsp;&nbsp;is A Brand of <a href="#">Shiekh Toothpick & Sugar Sachets</a>
+          <a href="https://7bugstoothpicks.surge.sh/"
+            ><img class="bugsimg" src="{%static 'Logos/7bugs.png' %}"
+          /></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;is A Brand of
+          <a href="#">Shiekh Toothpick & Sugar Sachets</a>
         </p>
       </div>
     </div>
@@ -180,6 +190,47 @@
   </div>
 </div>
 
+<section id="legel-advisor" style="margin-bottom: 7%">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+      <h2 class="cursive-font primary-color">Distributor</h2>
+    </div>
+  </div>
+
+  <div class="legel-container gtco-container">
+    <div class="legel-left">
+      <img
+        class="legel-advisor-pic"
+        src="{%static '/images/distpic.jpg' %}"
+        alt="Advisor"
+      />
+    </div>
+    <div class="legel-right">
+      <span class="legel-det">Name : Mohsin Shehzad </span>
+      <span class="legel-det"
+        >Phone : <a href="tel:03037408688"> 03334278658</a></span
+      >
+      <span class="legel-det"
+        >Registration No : <a href="tel:03347408688"> 3410423735523 </a></span
+      >
+    </div>
+    <div class="legel-work">
+      <ul class="legel-work-list">
+        <li class="legal-work">Paras Horeca Supplies</li>
+        <li class="legal-work">Hotel, Restaurant & Cafe Supplies</li>
+        <li class="legal-work">3-Ahmed Pura. Gondlanwala Road, Gujranwala</li>
+      </ul>
+    </div>
+    <div class="legel-work">
+      <img
+        style="width: 100%"
+        class="legel-advisor-pic"
+        src="{%static '/images/dist.jpg' %}"
+        alt="Advisor"
+      />
+    </div>
+  </div>
+</section>
 <section id="legel-advisor">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
