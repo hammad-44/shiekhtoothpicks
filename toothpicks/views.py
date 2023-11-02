@@ -1,15 +1,12 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from django import forms
-from toothpicks.models import product,Contacst, Order
 
 
 
 
 def home(request):
-    products= product.objects.all()
-    context = {"products":products}
-    return render(request, "home.html",  context)
+    return render(request, "home.html")
 
 
 
@@ -21,8 +18,7 @@ def contact(request):
         phoneNumber = request.POST['phone']
         message = request.POST['message']
         url =f"https://wa.me/923034139181?text=Name : {name}%0aPhone Number : {phoneNumber}%0aMessage : {message}"
-        contact=Contacst(name=name, email=phoneNumber, message=message)
-        contact.save()
+
         return redirect(url)
     else:
         return render(request,'contact.html')
@@ -52,8 +48,7 @@ def order(request):
             return render(request, 'orderform.html')
         formdata = {"name":name,"email":email,"phoneNumber":phoneNumber,"product":product,"quantity":quantity,"message":message}
         url =f"https://wa.me/923034139181?text=Name : {name}%0aEmail : {email}%0aPhone Number : {phoneNumber}%0aProduct : {product}%0aNumber of Box : {quantity}%0aAdress : {message}"
-        order=Order(name=name, email=email,number=phoneNumber,product=product,quantity=quantity, message=message)
-        order.save()
+
         return redirect(url)
         
 
